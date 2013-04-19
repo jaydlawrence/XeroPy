@@ -73,9 +73,13 @@ class Manager(object):
                     if key in self.BOOLEAN_FIELDS:
                         val = True if val.lower() == 'true' else False
                     if key in self.DATETIME_FIELDS:
-                        val = parse(val)
+                        #Jayd hack to convert datetime object to string
+                        #Allows saving in MongoDB
+                        val = parse(val).strftime("%Y-%m-%d %H:%M:%S")
                     if key in self.DATE_FIELDS:
-                        val = parse(val).date()
+                        #Jayd hack to convert datetime object to string
+                        #Allows saving in MongoDB
+                        val = parse(val).strftime("%Y-%m-%d %H:%M:%S")
 
                     out[key] = val
 
