@@ -10,7 +10,7 @@ setup(
     description="Pythonic ORM implementation of the Xero API",
     zip_safe=False,
     version="1.3",
-    packages=['xero', ],
+    packages=['XeroPy', ],
     install_requires=[
         'httplib2>=0.6.0',
         'oauth2==1.2.0',
