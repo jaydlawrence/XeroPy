@@ -9,12 +9,12 @@ setup(
     name="XeroPy",
     description="Pythonic ORM implementation of the Xero API",
     zip_safe=False,
-    version="1.4",
+    version="1.3.01",
     packages=['XeroPy', ],
     install_requires=[
         'httplib2>=0.6.0',
         'oauth2==1.2.0',
-        'SocksiPy-branch==1.02',
+        'SocksiPy-branch==1.01',
         'python-dateutil',
         #Jayd hack was not included but is needed
         #requires swig that must be installed using apt
