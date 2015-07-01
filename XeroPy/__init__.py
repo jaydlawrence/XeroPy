@@ -26,7 +26,7 @@ class Manager(object):
 
     DATETIME_FIELDS = (u'UpdatedDateUTC', u'Updated', u'FullyPaidOnDate')
     DATE_FIELDS = (u'DueDate', u'Date')
-    BOOLEAN_FIELDS = (u'IsSupplier', u'IsCustomer')
+    BOOLEAN_FIELDS = (u'IsSupplier', u'IsCustomer', u'HasAttachments')
 
     MULTI_LINES = (u'LineItem', u'Phone', u'Address', 'TaxRate')
     PLURAL_EXCEPTIONS = {'Addresse':'Address'}
@@ -260,7 +260,7 @@ class Xero(object):
     """
 
     OBJECT_LIST = (u'Contacts', u'Accounts', u'CreditNotes',
-                   u'Currencies', u'Invoices', u'Organisation',
+                   u'Currencies', u'Invoices', u'Organisation', u'Overpayments',
                    u'Payments', u'TaxRates', u'TrackingCategories')
 
     def __init__(self, consumer_key, consumer_secret, privatekey):
